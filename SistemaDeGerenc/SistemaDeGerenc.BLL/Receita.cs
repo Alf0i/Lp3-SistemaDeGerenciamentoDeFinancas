@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace SistemaDeGerenc.BLL
 {
-    internal class Receita
+    internal class Receita:IReceita
     {
-        public int id_Receita;
-        public float data;
-        public float valor;
-        public string? categoria;
-        public string? descricao;
+        private int id_Receita;
+        private float data;
+        private float valor;
+        private string? categoria;
+        private string? descricao;
 
         public Receita(int id_Receita, float data, float valor, string? categoria, string? descricao)
         {
@@ -22,5 +22,13 @@ namespace SistemaDeGerenc.BLL
             this.categoria = categoria;
             this.descricao = descricao;
         }
+
+        public int Id_Receita { get => id_Receita; set => id_Receita = value; }
+        public float Data { get => data; set => data = value; }
+        public float Valor { get => valor; set => valor = value; }
+        public string? Categoria { get => categoria; set => categoria = value; }
+        public string? Descricao { get => descricao; set => descricao = value; }
+
+
     }
 }
