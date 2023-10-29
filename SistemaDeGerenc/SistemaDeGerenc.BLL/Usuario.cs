@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SistemaDeGerenc.MODEL;
+using SistemaDeGerenc.DAL.
 
 namespace SistemaDeGerenc.BLL
 {
-    internal class Usuario:IUsuario
+    public class Usuario:IUsuario
     {
         public int id_Usuario;
         public string? nome;
@@ -35,7 +37,7 @@ namespace SistemaDeGerenc.BLL
 
         public void CadastrarUsuario()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void RemoverUsuario()

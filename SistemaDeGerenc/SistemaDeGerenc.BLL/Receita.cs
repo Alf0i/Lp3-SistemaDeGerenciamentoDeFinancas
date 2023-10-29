@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaDeGerenc.BLL
 {
-    internal class Receita:IReceita
+    public class Receita:IReceita
     {
         private int id_Receita;
         private float data;

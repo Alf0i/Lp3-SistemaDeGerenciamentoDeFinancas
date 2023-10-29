@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace SistemaDeGerenc.BLL
 {
-    internal class Despesa:IDespesa
+    public class Despesa:IDespesa
     {
         private int id_Despesa;
         private float data;
