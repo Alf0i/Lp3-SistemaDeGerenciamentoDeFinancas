@@ -8,6 +8,10 @@ namespace SistemaDeGerenc.BLL
 {
     internal interface IDespesa
     {
-        void CalcularDespesa();
+        int Id_Despesa { get; set; }
+        float Data { get; set; }
+        float Valor { get; set; }
+        string? Categoria { get; set; }
+        string? Descricao { get; set; }
     }
 }

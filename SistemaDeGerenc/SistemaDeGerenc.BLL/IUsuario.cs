@@ -16,5 +16,6 @@ namespace SistemaDeGerenc.BLL
         void CadastrarUsuario();
         void RemoverUsuario();
         void TrocarSenha();
+        void CalcularSaldo();
     }
 }

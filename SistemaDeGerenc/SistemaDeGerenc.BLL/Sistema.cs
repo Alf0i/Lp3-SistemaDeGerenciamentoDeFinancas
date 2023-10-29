@@ -9,18 +9,13 @@ namespace SistemaDeGerenc.BLL
     internal class Sistema
     {
         public List<Usuario> _us;
-        public List<Despesa> _desp;
-        public List<Receita> _rec;
-
-
         public IUsuario usuario;
 
-        public Sistema(List<Usuario> us, List<Despesa> desp, List<Receita> rec, Usuario usu)
+        public Sistema(List<Usuario> us, Usuario usu)
         {
             this.usuario = (IUsuario)usu;
             this._us = us;
-            this._desp = desp;
-            this._rec = rec;
+            
         }
 
 
@@ -31,19 +26,7 @@ namespace SistemaDeGerenc.BLL
             else return false;
         }
 
-        public bool CadastrarDespesa(Despesa desp)
-        {
-            if (desp == null) return true;
-            _desp!.Add(desp);
-            return false;
-        }
-
-        public bool CadastrarReceita(Receita rec)
-        {
-            if (rec == null) return true;
-            _rec!.Add(rec);
-            return false;
-        }
+        
 
         
 
