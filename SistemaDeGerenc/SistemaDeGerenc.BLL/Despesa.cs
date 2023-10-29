@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaDeGerenc.BLL
 {
-    internal class Despesa
+    internal class Despesa:IDespesa
     {
         public int id_Despesa;
         public float data;
@@ -21,6 +21,11 @@ namespace SistemaDeGerenc.BLL
             this.valor = valor;
             this.categoria = categoria;
             this.descricao = descricao;
+        }
+
+        public void CalcularDespesa()
+        {
+            throw new NotImplementedException();
         }
     }
 }

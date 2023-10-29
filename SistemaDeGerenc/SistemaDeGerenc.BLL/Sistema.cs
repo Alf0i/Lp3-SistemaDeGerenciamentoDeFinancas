@@ -45,10 +45,7 @@ namespace SistemaDeGerenc.BLL
             return false;
         }
 
-        public Saldo CalcularSaldo(Saldo saldo)
-        {
-            return saldo;
-        }
+        
 
         /*public bool FiltrarDesp(Despesa descricao)
         {

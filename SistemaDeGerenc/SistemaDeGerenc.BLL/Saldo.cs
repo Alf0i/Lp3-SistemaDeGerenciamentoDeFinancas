@@ -14,5 +14,10 @@ namespace SistemaDeGerenc.BLL
         {
             _valor = valor;
         }
+
+        public Saldo CalcularSaldo(Saldo saldo)
+        {
+            return saldo;
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaDeGerenc.BLL
 {
-    internal class Receita
+    internal class Receita:IReceita
     {
         public int id_Receita;
         public float data;
@@ -21,6 +21,11 @@ namespace SistemaDeGerenc.BLL
             this.valor = valor;
             this.categoria = categoria;
             this.descricao = descricao;
+        }
+
+        public void CalcularReceita()
+        {
+            throw new NotImplementedException();
         }
     }
 }
