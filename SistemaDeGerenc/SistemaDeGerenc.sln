@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeGerenc.BLL", "SistemaDeGerenc.BLL\SistemaDeGerenc.BLL.csproj", "{72E329E2-621A-404E-9F70-FC502CAFB146}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaDeGerenc.BLL", "SistemaDeGerenc.BLL\SistemaDeGerenc.BLL.csproj", "{72E329E2-621A-404E-9F70-FC502CAFB146}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeGerenc.APPv1", "SistemaDeGerenc.APPv1\SistemaDeGerenc.APPv1.csproj", "{FAA78C1B-F44B-487D-9A47-9B28BCB801C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaDeGerenc.APPv1", "SistemaDeGerenc.APPv1\SistemaDeGerenc.APPv1.csproj", "{FAA78C1B-F44B-487D-9A47-9B28BCB801C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeGerenc.DAL", "SistemaDeGerenc.DAL\SistemaDeGerenc.DAL.csproj", "{400C138C-8F7B-4CE7-83F9-CD90627DA229}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaDeGerenc.DAL", "SistemaDeGerenc.DAL\SistemaDeGerenc.DAL.csproj", "{400C138C-8F7B-4CE7-83F9-CD90627DA229}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeGerenc.MODEL", "SistemaDeGerenc.MODEL\SistemaDeGerenc.MODEL.csproj", "{1DC6E103-2089-4F57-B11A-9EF2818ECF6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaDeGerenc.MODEL", "SistemaDeGerenc.MODEL\SistemaDeGerenc.MODEL.csproj", "{1DC6E103-2089-4F57-B11A-9EF2818ECF6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
