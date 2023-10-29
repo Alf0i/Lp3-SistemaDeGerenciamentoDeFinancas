@@ -9,11 +9,11 @@ namespace SistemaDeGerenc.BLL
     internal class Usuario
     {
         public int id_Usuario;
-        public string? nome;
-        public string? email;
-        public string? senha;
+        public string nome;
+        public string email;
+        public string senha;
 
-        public Usuario(int id_Usuario, string? nome, string? email, string? senha)
+        public Usuario(int id_Usuario, string nome, string email, string senha)
         {
             this.id_Usuario = id_Usuario;
             this.nome = nome;
