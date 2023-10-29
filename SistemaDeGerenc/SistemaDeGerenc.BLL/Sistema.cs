@@ -9,25 +9,23 @@ namespace SistemaDeGerenc.BLL
     internal class Sistema
     {
         public List<Usuario> _us;
-        public List<Despesa>? _desp;
-        public List<Receita>? _rec;
+        public List<Despesa> _desp;
+        public List<Receita> _rec;
 
 
         public IUsuario usuario;
 
-        public Sistema(List<Usuario>? us, List<Despesa>? desp, List<Receita>? rec, Usuario usu)
+        public Sistema(List<Usuario> us, List<Despesa> desp, List<Receita> rec, Usuario usu)
         {
-            this.usuario = (IUsuario?)usu;
-            _us = us;
-            _desp = desp;
-            _rec = rec;
+            this.usuario = (IUsuario)usu;
+            this._us = us;
+            this._desp = desp;
+            this._rec = rec;
         }
 
 
         public bool Autenticar(Usuario us)
         {
-            this.usuario = (IUsuario?)us;
-
             if (us == null) return false;
             else if (_us.Contains(us)) return true;
             else return false;
@@ -52,13 +50,13 @@ namespace SistemaDeGerenc.BLL
             return saldo;
         }
 
-        public List<Despesa>? FiltrarDesp(Despesa descricao)
+        /*public bool FiltrarDesp(Despesa descricao)
         {
             if (_desp!.Contains(descricao))
             {
                 return _desp;
             }
             else return null;
-        }
+        }*/
     }
 }

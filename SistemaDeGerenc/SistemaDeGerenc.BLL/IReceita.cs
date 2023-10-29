@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaDeGerenc.BLL
 {
-    internal interface iReceita
+    internal interface IReceita
     {
         void CalcularReceita();
     }
