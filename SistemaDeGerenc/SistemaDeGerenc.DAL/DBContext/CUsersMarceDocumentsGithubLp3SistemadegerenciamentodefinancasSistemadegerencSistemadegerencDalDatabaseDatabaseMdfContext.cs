@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using SistemaDeGerenc.MODEL.DBContext;
+using SistemaDeGerenc.MODEL;
 
 namespace SistemaDeGerenc.DAL.DBContext;
 
