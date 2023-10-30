@@ -39,45 +39,31 @@ namespace SistemaDeGerenc.BLL
                 return usuario;
             }
         }
-        public static void TrocarSenha(string? senha)
+        public static Usuario GetByName(string? nome)
         {
             using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
             {
-
+                var usuario = dbContext.Usuarios.Single(p => p.Nome == nome);
+                return usuario;
             }
         }
 
 
-
-
-        /*public void CalcularSaldo()
+        public static double? CalcularSaldo(string? nome)
         {
-            float SomaDespesa = 0;
-            float SomaReceita = 0;
-            foreach (var despesa in _desp)
+            using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
             {
-                SomaDespesa += despesa.Valor;
-            }
-            foreach (var receita in _rec)
-            {
-                SomaReceita += receita.Valor;
+                Usuario us = GetByName(nome);
+                double? despesa = DespesaBll.CalcularDespesa();
+                double? receita = ReceitaBll.CalcularReceita();
+                us.Saldo += receita - despesa;
+                return us.Saldo;
             }
 
-            saldo = SomaReceita - SomaDespesa;
+
+           
         }
 
-        public bool CadastrarDespesa(Despesa desp)
-        {
-            if (desp == null) return true;
-            _desp!.Add(desp);
-            return false;
-        }
-
-        public bool CadastrarReceita(Receita rec)
-        {
-            if (rec == null) return true;
-            _rec!.Add(rec);
-            return false;
-        }*/
+        
     }
 }
