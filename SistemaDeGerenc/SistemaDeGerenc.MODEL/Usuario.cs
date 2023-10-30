@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SistemaDeGerenc.MODEL;
+namespace SistemaDeGerenc.MODEL.DBContext;
 
 public partial class Usuario
 {
@@ -12,4 +12,6 @@ public partial class Usuario
     public string? Email { get; set; }
 
     public string? Senha { get; set; }
+
+    public double? Saldo { get; set; }
 }

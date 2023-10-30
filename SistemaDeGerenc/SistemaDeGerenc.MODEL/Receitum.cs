@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SistemaDeGerenc.MODEL;
+namespace SistemaDeGerenc.MODEL.DBContext;
 
 public partial class Receitum
 {

@@ -8,4 +8,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaDeGerenc.BLL\SistemaDeGerenc.BLL.csproj" />
+    <ProjectReference Include="..\SistemaDeGerenc.MODEL\SistemaDeGerenc.MODEL.csproj" />
+  </ItemGroup>
+
 </Project>

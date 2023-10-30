@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using SistemaDeGerenc.MODEL;
+using SistemaDeGerenc.MODEL.DBContext;
 
 namespace SistemaDeGerenc.DAL.DBContext;
 
-public partial class CUsersMarceSourceReposLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDbDatabaseMdfContext : DbContext
+public partial class CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext : DbContext
 {
-    public CUsersMarceSourceReposLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDbDatabaseMdfContext()
+    public CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext()
     {
     }
 
-    public CUsersMarceSourceReposLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDbDatabaseMdfContext(DbContextOptions<CUsersMarceSourceReposLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDbDatabaseMdfContext> options)
+    public CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext(DbContextOptions<CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext> options)
         : base(options)
     {
     }
@@ -24,15 +24,15 @@ public partial class CUsersMarceSourceReposLp3SistemadegerenciamentodefinancasSi
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\marce\\source\\repos\\Lp3-SistemaDeGerenciamentoDeFinancas\\SistemaDeGerenc\\SistemaDeGerenc.DAL\\db\\database.mdf;Integrated Security=True");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\marce\\Documents\\GitHub\\Lp3-SistemaDeGerenciamentoDeFinancas\\SistemaDeGerenc\\SistemaDeGerenc.DAL\\database\\database.mdf;Integrated Security=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Despesa>(entity =>
         {
-            entity.HasKey(e => e.IdDespesa).HasName("PK__DESPESA__908A38B4C0643DCA");
+            entity.HasKey(e => e.IdDespesa).HasName("PK__Despesa__908A38B444069752");
 
-            entity.ToTable("DESPESA");
+            entity.ToTable("Despesa");
 
             entity.Property(e => e.IdDespesa).HasColumnName("Id_despesa");
             entity.Property(e => e.Categoria)
@@ -51,9 +51,7 @@ public partial class CUsersMarceSourceReposLp3SistemadegerenciamentodefinancasSi
 
         modelBuilder.Entity<Receitum>(entity =>
         {
-            entity.HasKey(e => e.IdReceita).HasName("PK__RECEITA__615A29060C72F6BA");
-
-            entity.ToTable("RECEITA");
+            entity.HasKey(e => e.IdReceita).HasName("PK__Receita__615A29062E3913C0");
 
             entity.Property(e => e.IdReceita).HasColumnName("Id_receita");
             entity.Property(e => e.Categoria)
@@ -72,9 +70,9 @@ public partial class CUsersMarceSourceReposLp3SistemadegerenciamentodefinancasSi
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.IdUsuario).HasName("PK__USUARIO__EF59F76267167FC0");
+            entity.HasKey(e => e.IdUsuario).HasName("PK__Usuario__EF59F762083BCD21");
 
-            entity.ToTable("USUARIO");
+            entity.ToTable("Usuario");
 
             entity.Property(e => e.IdUsuario).HasColumnName("Id_usuario");
             entity.Property(e => e.Email)
@@ -85,11 +83,11 @@ public partial class CUsersMarceSourceReposLp3SistemadegerenciamentodefinancasSi
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("nome");
+            entity.Property(e => e.Saldo).HasColumnName("saldo");
             entity.Property(e => e.Senha)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("senha");
-            
         });
 
         OnModelCreatingPartial(modelBuilder);
