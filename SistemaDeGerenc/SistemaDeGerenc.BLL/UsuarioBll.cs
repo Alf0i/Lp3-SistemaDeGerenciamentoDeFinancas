@@ -47,16 +47,16 @@ namespace SistemaDeGerenc.BLL
                 return usuario;
             }
         }
-
+        
 
         public static double? CalcularSaldo(string? nome)
         {
             using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
             {
                 Usuario us = GetByName(nome);
-                double? despesa = DespesaBll.CalcularDespesa();
-                double? receita = ReceitaBll.CalcularReceita();
-                us.Saldo += receita - despesa;
+                var despesas = dbContext.Usuarios.Sum(p => us.IdDespesa!.Value);
+                var receitas = dbContext.Usuarios.Sum(p => us.IdReceita!.Value);
+                us.Saldo += receitas - despesas;
                 return us.Saldo;
             }
 
@@ -64,6 +64,23 @@ namespace SistemaDeGerenc.BLL
            
         }
 
-        
+        public static List<Usuario> FiltrarDespesas(string nome)
+        {
+            using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
+            {
+                Usuario us = GetByName(nome);
+                var despesas = dbContext.Usuarios.OrderBy(p=> us.IdDespesaNavigation!.Categoria).ToList();
+                return despesas;
+            }
+        }
+        public static List<Usuario> FiltrarReceitas(string? nome)
+        {
+            using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
+            {
+                Usuario us = GetByName(nome);
+                var receitas = dbContext.Usuarios.OrderBy(p => us.IdReceitaNavigation!.Categoria).ToList();
+                return receitas;
+            }
+        }
     }
 }

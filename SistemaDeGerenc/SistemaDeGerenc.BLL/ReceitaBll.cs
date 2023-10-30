@@ -28,13 +28,6 @@ namespace SistemaDeGerenc.BLL
             }
         }
 
-        public static double? CalcularReceita()
-        {
-            using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
-            {
-                var receita = dbContext.Receita.Sum(p => p.Valor);
-                return receita;
-            }
-        }
+       
     }
 }
