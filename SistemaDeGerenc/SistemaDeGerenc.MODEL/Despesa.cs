@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SistemaDeGerenc.MODEL.DBContext;
+namespace SistemaDeGerenc.MODEL;
 
 public partial class Despesa
 {
