@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using SistemaDeGerenc.MODEL.DBContext;
-
 namespace SistemaDeGerenc.DAL.DBContext;
 
 public partial class CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext : DbContext
@@ -79,6 +78,8 @@ public partial class CUsersMarceDocumentsGithubLp3Sistemadegerenciamentodefinanc
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("email");
+            entity.Property(e => e.IdDespesa).HasColumnName("Id_despesa");
+            entity.Property(e => e.IdReceita).HasColumnName("Id_receita");
             entity.Property(e => e.Nome)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -88,6 +89,14 @@ public partial class CUsersMarceDocumentsGithubLp3Sistemadegerenciamentodefinanc
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("senha");
+
+            entity.HasOne(d => d.IdDespesaNavigation).WithMany(p => p.Usuarios)
+                .HasForeignKey(d => d.IdDespesa)
+                .HasConstraintName("FK__Usuario__Id_desp__29572725");
+
+            entity.HasOne(d => d.IdReceitaNavigation).WithMany(p => p.Usuarios)
+                .HasForeignKey(d => d.IdReceita)
+                .HasConstraintName("FK__Usuario__Id_rece__286302EC");
         });
 
         OnModelCreatingPartial(modelBuilder);

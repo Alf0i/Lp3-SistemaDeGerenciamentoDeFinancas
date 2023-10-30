@@ -14,4 +14,12 @@ public partial class Usuario
     public string? Senha { get; set; }
 
     public double? Saldo { get; set; }
+
+    public int? IdDespesa { get; set; }
+
+    public int? IdReceita { get; set; }
+
+    public virtual Despesa? IdDespesaNavigation { get; set; }
+
+    public virtual Receitum? IdReceitaNavigation { get; set; }
 }
