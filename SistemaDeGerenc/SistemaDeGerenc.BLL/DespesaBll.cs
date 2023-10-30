@@ -28,5 +28,13 @@ namespace SistemaDeGerenc.BLL
             }
         }
 
+        public static double? CalcularDespesa()
+        {
+            using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
+            {
+                var despesa = dbContext.Despesas.Sum(p => p.Valor);
+                return despesa;
+            }
+        }
     }
 }
