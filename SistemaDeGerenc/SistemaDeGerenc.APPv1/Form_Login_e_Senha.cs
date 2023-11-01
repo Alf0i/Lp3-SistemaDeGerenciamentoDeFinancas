@@ -24,14 +24,15 @@ namespace SistemaDeGerenc.APPv1
             us.Email = usuario;
             us.Senha = senha;
 
-            if (!UsuarioBll.AutenticarUsuario(usuario, senha)) {
+            if (!UsuarioBll.AutenticarUsuario(usuario, senha)) 
+            {
                 UsuarioBll.CadastrarUsuario(us);
-                MessageBox.Show("Seja bem-vindo : " + us.Nome);
+                MessageBox.Show("Bem-vindo : " );
             } 
             else
             {
-                UsuarioBll.GetByEmail(usuario);
-                MessageBox.Show("Seja bem-vindo : " + us.Nome);
+               UsuarioBll.GetByEmail(us.Email);
+               MessageBox.Show("Seja bem-vindo : " + us.Email);
             }
         }
 

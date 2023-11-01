@@ -25,10 +25,11 @@ namespace SistemaDeGerenc.BLL
         {
             using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
             {
-                var usuario = dbContext.Usuarios.Single(p => p.Email == email);
+                var usuario1 = dbContext.Usuarios.Single(p => p.Email == email);
                 var usuario2 = dbContext.Usuarios.Single(p => p.Senha == senha);
-                if (email != null && senha != null && usuario == usuario2) return true;
-                return false;
+                if (usuario1 == null || usuario2 == null) return false;
+                else if(usuario1 == usuario2) return true;
+                else return false;
             }
         }
         public static Usuario GetById(int id)
