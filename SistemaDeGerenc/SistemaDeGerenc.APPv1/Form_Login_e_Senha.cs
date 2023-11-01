@@ -1,4 +1,6 @@
 
+using Azure.Messaging;
+using Microsoft.VisualBasic;
 using SistemaDeGerenc.BLL;
 using SistemaDeGerenc.MODEL;
 
@@ -26,8 +28,14 @@ namespace SistemaDeGerenc.APPv1
 
             if (!UsuarioBll.AutenticarUsuario(usuario, senha)) 
             {
-                UsuarioBll.CadastrarUsuario(us);
-                MessageBox.Show("Bem-vindo : " );
+                var msg1 = MessageBox.Show("Usuario não identificado. Deseja cadastrar ?", "Usuario não encontrado", MessageBoxButtons.YesNo);
+                if (msg1 == DialogResult.Yes)
+                {
+                    //UsuarioBll.CadastrarUsuario(us);
+                    MessageBox.Show("cadastrado");
+                }
+                //
+                MessageBox.Show("Muito obrigado por escolher a nossa empresa." );
             } 
             else
             {
