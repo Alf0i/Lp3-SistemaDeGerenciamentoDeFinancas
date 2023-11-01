@@ -1,4 +1,7 @@
 
+using SistemaDeGerenc.BLL;
+using SistemaDeGerenc.MODEL;
+
 namespace SistemaDeGerenc.APPv1
 {
     public partial class Form_Login_e_Senha : Form
@@ -15,7 +18,21 @@ namespace SistemaDeGerenc.APPv1
 
         private void btoLogar(object sender, EventArgs e)
         {
-            MessageBox.Show("Seja bem vindo");
+            string usuario = textEmail.Text;
+            string senha = textSenha.Text;
+            Usuario us = new Usuario();
+            us.Email = usuario;
+            us.Senha = senha;
+
+            if (!UsuarioBll.AutenticarUsuario(usuario, senha)) {
+                UsuarioBll.CadastrarUsuario(us);
+                MessageBox.Show("Seja bem-vindo : " + us.Nome);
+            } 
+            else
+            {
+                UsuarioBll.GetByEmail(usuario);
+                MessageBox.Show("Seja bem-vindo : " + us.Nome);
+            }
         }
 
         private void textBoxUsuario(object sender, EventArgs e)
@@ -42,5 +59,7 @@ namespace SistemaDeGerenc.APPv1
         {
 
         }
+
+
     }
 }

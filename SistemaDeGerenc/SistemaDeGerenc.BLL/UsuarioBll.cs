@@ -39,6 +39,15 @@ namespace SistemaDeGerenc.BLL
                 return usuario;
             }
         }
+        public static Usuario GetByEmail(string? email)
+        {
+            using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
+            {
+                var usuario = dbContext.Usuarios.Single(p => p.Email == email);
+                return usuario;
+            }
+        }
+
         public static Usuario GetByName(string? nome)
         {
             using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
@@ -47,7 +56,7 @@ namespace SistemaDeGerenc.BLL
                 return usuario;
             }
         }
-        
+
 
         public static double? CalcularSaldo(string? nome)
         {
