@@ -1,6 +1,6 @@
 ﻿namespace SistemaDeGerenc.APPv1
 {
-    partial class Form1
+    partial class Form_Login_e_Senha
     {
         /// <summary>
         ///  Required designer variable.

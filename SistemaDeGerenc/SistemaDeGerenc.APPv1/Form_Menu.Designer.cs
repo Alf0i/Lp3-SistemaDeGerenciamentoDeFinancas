@@ -72,7 +72,7 @@
             button1.TabIndex = 10;
             button1.Text = "Cadastrar Despesa";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            button1.Click += btoCadastrarDespesa;
             // 
             // button2
             // 
@@ -83,6 +83,7 @@
             button2.TabIndex = 11;
             button2.Text = "Cadastrar Receita";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += btoCadastrarReceita;
             // 
             // button3
             // 
@@ -93,6 +94,7 @@
             button3.TabIndex = 12;
             button3.Text = "Cálculo do Saldo";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += btoCalcularSaldo;
             // 
             // button4
             // 
@@ -103,6 +105,7 @@
             button4.TabIndex = 13;
             button4.Text = "Classificação de Despesas";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += btoClassDespesa;
             // 
             // button5
             // 
@@ -113,6 +116,7 @@
             button5.TabIndex = 14;
             button5.Text = "Realização de Filtros";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += btoRealizarFiltro;
             // 
             // Form2
             // 

@@ -52,7 +52,27 @@ namespace SistemaDeGerenc.APPv1
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btoCadastrarDespesa(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btoCadastrarReceita(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btoCalcularSaldo(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btoClassDespesa(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btoRealizarFiltro(object sender, EventArgs e)
         {
 
         }
