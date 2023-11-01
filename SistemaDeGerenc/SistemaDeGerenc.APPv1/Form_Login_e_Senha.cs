@@ -18,7 +18,7 @@ namespace SistemaDeGerenc.APPv1
             MessageBox.Show("Seja bem vindo");
         }
 
-        private void textBoxUsuario(object sender, EventArgs e)
+        private void textBoxEmail(object sender, EventArgs e)
         {
 
         }

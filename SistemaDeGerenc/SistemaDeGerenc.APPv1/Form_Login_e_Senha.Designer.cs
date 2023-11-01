@@ -54,7 +54,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(186, 23);
             textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBoxUsuario;
+            textBox1.TextChanged += textBoxEmail;
             // 
             // textBox2
             // 
