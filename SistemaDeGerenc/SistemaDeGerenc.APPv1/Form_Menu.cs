@@ -17,7 +17,7 @@ namespace SistemaDeGerenc.APPv1
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void labelTitulo(object sender, EventArgs e)
         {
 
         }
@@ -38,6 +38,21 @@ namespace SistemaDeGerenc.APPv1
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelMenu(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
 
         }

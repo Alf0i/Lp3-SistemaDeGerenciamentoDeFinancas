@@ -45,7 +45,7 @@
             button1.TabIndex = 0;
             button1.Text = "Logar";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += btoLogar;
             // 
             // textBox1
             // 
@@ -54,7 +54,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(186, 23);
             textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.TextChanged += textBoxUsuario;
             // 
             // textBox2
             // 
@@ -62,6 +62,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(186, 23);
             textBox2.TabIndex = 2;
+            textBox2.TextChanged += textBoxSenha;
             // 
             // label1
             // 
@@ -69,12 +70,12 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Constantia", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(391, 246);
+            label1.Location = new Point(391, 236);
             label1.Name = "label1";
             label1.Size = new Size(254, 26);
             label1.TabIndex = 3;
             label1.Text = "Nome de Usuário(Email)\r\n";
-            label1.Click += label1_Click;
+            label1.Click += labelLogin;
             // 
             // label2
             // 
@@ -87,6 +88,7 @@
             label2.Size = new Size(72, 26);
             label2.TabIndex = 4;
             label2.Text = "Senha";
+            label2.Click += labelSenha;
             // 
             // label3
             // 
@@ -94,12 +96,12 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Constantia", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(169, 162);
+            label3.Location = new Point(198, 112);
             label3.Name = "label3";
             label3.Size = new Size(593, 45);
             label3.TabIndex = 5;
             label3.Text = "Sistema Gerenciador de Finanças";
-            label3.Click += label3_Click;
+            label3.Click += labelTitulo;
             // 
             // Form1
             // 
