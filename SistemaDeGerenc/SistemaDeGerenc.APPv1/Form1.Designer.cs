@@ -38,7 +38,8 @@
             // 
             // button1
             // 
-            button1.Location = new Point(418, 264);
+            button1.Font = new Font("Constantia", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            button1.Location = new Point(500, 359);
             button1.Name = "button1";
             button1.Size = new Size(89, 23);
             button1.TabIndex = 0;
@@ -49,7 +50,7 @@
             // textBox1
             // 
             textBox1.BackColor = SystemColors.Window;
-            textBox1.Location = new Point(309, 180);
+            textBox1.Location = new Point(391, 275);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(186, 23);
             textBox1.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(309, 235);
+            textBox2.Location = new Point(391, 330);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(186, 23);
             textBox2.TabIndex = 2;
@@ -65,8 +66,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Constantia", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(309, 151);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(391, 246);
             label1.Name = "label1";
             label1.Size = new Size(254, 26);
             label1.TabIndex = 3;
@@ -76,8 +79,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Constantia", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label2.Location = new Point(309, 206);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(391, 301);
             label2.Name = "label2";
             label2.Size = new Size(72, 26);
             label2.TabIndex = 4;
@@ -86,8 +91,10 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
             label3.Font = new Font("Constantia", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label3.Location = new Point(87, 67);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(169, 162);
             label3.Name = "label3";
             label3.Size = new Size(593, 45);
             label3.TabIndex = 5;
@@ -98,7 +105,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(992, 556);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);

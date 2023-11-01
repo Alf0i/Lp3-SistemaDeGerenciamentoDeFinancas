@@ -1,4 +1,3 @@
-using SistemaDeGerenc.BLL;
 
 namespace SistemaDeGerenc.APPv1
 {
@@ -27,6 +26,11 @@ namespace SistemaDeGerenc.APPv1
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void SeuFormulario_Load(object sender, EventArgs e)
+        {
+            label1.Paint += new PaintEventHandler(label1_Click);
         }
 
         private void label2_Click(object sender, EventArgs e)
