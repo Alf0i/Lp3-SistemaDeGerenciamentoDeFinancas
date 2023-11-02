@@ -33,7 +33,8 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
-            button5 = new Button();
+            buttonFilDesp = new Button();
+            buttonFilRec = new Button();
             SuspendLayout();
             // 
             // label3
@@ -65,7 +66,7 @@
             // button1
             // 
             button1.Font = new Font("Constantia", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(331, 312);
+            button1.Location = new Point(215, 312);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(161, 79);
@@ -77,7 +78,7 @@
             // button2
             // 
             button2.Font = new Font("Constantia", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(595, 312);
+            button2.Location = new Point(490, 312);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(161, 79);
@@ -89,7 +90,7 @@
             // button3
             // 
             button3.Font = new Font("Constantia", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(331, 463);
+            button3.Location = new Point(766, 312);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(161, 79);
@@ -98,24 +99,37 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += btoCalculaSaldo;
             // 
-            // button5
+            // buttonFilDesp
             // 
-            button5.Font = new Font("Constantia", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(595, 463);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(161, 79);
-            button5.TabIndex = 12;
-            button5.Text = "Realizar Filtros";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += btoRealizaFiltros;
+            buttonFilDesp.Font = new Font("Constantia", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonFilDesp.Location = new Point(628, 466);
+            buttonFilDesp.Margin = new Padding(3, 4, 3, 4);
+            buttonFilDesp.Name = "buttonFilDesp";
+            buttonFilDesp.Size = new Size(161, 102);
+            buttonFilDesp.TabIndex = 12;
+            buttonFilDesp.Text = "Realizar Filtros de Despesa";
+            buttonFilDesp.UseVisualStyleBackColor = true;
+            buttonFilDesp.Click += buttonFilDesp_Click;
+            // 
+            // buttonFilRec
+            // 
+            buttonFilRec.Font = new Font("Constantia", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonFilRec.Location = new Point(357, 466);
+            buttonFilRec.Margin = new Padding(3, 4, 3, 4);
+            buttonFilRec.Name = "buttonFilRec";
+            buttonFilRec.Size = new Size(161, 102);
+            buttonFilRec.TabIndex = 13;
+            buttonFilRec.Text = "Realizar Filtros de Receita";
+            buttonFilRec.UseVisualStyleBackColor = true;
+            buttonFilRec.Click += buttonFilRec_Click;
             // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1133, 741);
-            Controls.Add(button5);
+            Controls.Add(buttonFilRec);
+            Controls.Add(buttonFilDesp);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -135,6 +149,7 @@
         private Button button1;
         private Button button2;
         private Button button3;
-        private Button button5;
+        private Button buttonFilDesp;
+        private Button buttonFilRec;
     }
 }

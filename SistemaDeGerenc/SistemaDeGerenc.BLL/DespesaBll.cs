@@ -19,12 +19,12 @@ namespace SistemaDeGerenc.BLL
             }
         }
 
-        public static Despesa GetByCategoria(string? cat)
+        public static List<Despesa> GetByCategoria()
         {
             using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
             {
-                var despesa = dbContext.Despesas.Single(p => p.Categoria == cat);
-                return despesa;
+                //var despesa = dbContext.Despesas.;
+                return (List<Despesa>)(from Despesa in dbContext.Despesas orderby Despesa.Categoria select Despesa!);
             }
         }
 

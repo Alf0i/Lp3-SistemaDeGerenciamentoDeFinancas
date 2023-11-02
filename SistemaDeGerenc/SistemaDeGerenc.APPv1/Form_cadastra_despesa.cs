@@ -14,8 +14,8 @@ namespace SistemaDeGerenc.APPv1
 {
     public partial class Form_cadastra_despesa : Form
     {
-        private string? email;
-        public Form_cadastra_despesa(string? email)
+        private string email;
+        public Form_cadastra_despesa(string email)
         {
             InitializeComponent();
             this.email = email;

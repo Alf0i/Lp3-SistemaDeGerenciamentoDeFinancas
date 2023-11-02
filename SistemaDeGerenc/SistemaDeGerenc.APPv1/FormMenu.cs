@@ -28,10 +28,12 @@ namespace SistemaDeGerenc.APPv1
 
         }
 
-        private void btoRealizaFiltros(object sender, EventArgs e)
+        private void buttonFilDesp_Click(object sender, EventArgs e)
         {
-            //Form form = new Form(email);
-            //Form.ShowDialog();
+            Form_cadastra_despesa desp = new Form_cadastra_despesa(email);
+            Form_Mostra_Tabela form = new Form_Mostra_Tabela(email,desp);
+            form.ShowDialog();
+            this.Close();
         }
 
         private void labelTitulo(object sender, EventArgs e)
@@ -60,6 +62,12 @@ namespace SistemaDeGerenc.APPv1
             MessageBox.Show(saldo.ToString(), "Janela de saldo");
         }
 
-        
+        private void buttonFilRec_Click(object sender, EventArgs e)
+        {
+            Form_cadastra_receita rec = new Form_cadastra_receita(email);
+            Form_Mostra_Tabela form = new Form_Mostra_Tabela(email, rec);
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

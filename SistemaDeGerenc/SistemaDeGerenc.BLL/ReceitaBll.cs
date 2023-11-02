@@ -19,15 +19,15 @@ namespace SistemaDeGerenc.BLL
             }
         }
 
-        public static Receitum GetByCategoria(string? cat)
+        public static List<Receitum> GetByCategoria()
         {
             using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
             {
-                var receita = dbContext.Receita.Single(p => p.Categoria == cat);
-                return receita;
+                //var despesa = dbContext.Despesas.;
+                return (List<Receitum>)(from Receitum in dbContext.Receita orderby Receitum.Categoria select Receitum!);
             }
         }
 
-       
+
     }
 }
