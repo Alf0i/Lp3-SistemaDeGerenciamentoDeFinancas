@@ -8,9 +8,11 @@ namespace SistemaDeGerenc.APPv1
 {
     public partial class Form_Login_e_Senha : Form
     {
+         
         public Form_Login_e_Senha()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -23,6 +25,7 @@ namespace SistemaDeGerenc.APPv1
             string usuario = textEmail.Text;
             string senha = textSenha.Text;
             Usuario us = new Usuario();
+            FormMenu Menu = new FormMenu(textEmail.Text);
             us.Email = usuario;
             us.Senha = senha;
 
@@ -33,14 +36,19 @@ namespace SistemaDeGerenc.APPv1
                 {
                     //UsuarioBll.CadastrarUsuario(us);
                     MessageBox.Show("cadastrado");
+                    this.Close();
+                    Menu.ShowDialog();
+                    
                 }
-                //
+                
                 MessageBox.Show("Muito obrigado por escolher a nossa empresa." );
             } 
             else
             {
-               UsuarioBll.GetByEmail(us.Email);
-               MessageBox.Show("Seja bem-vindo : " + us.Email);
+                UsuarioBll.GetByEmail(us.Email);
+                MessageBox.Show("Seja bem-vindo : " + us.Email);
+                this.Close();
+                Menu.ShowDialog();
             }
         }
 

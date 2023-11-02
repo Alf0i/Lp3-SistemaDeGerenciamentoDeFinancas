@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemaDeGerenc.BLL;
+using SistemaDeGerenc.MODEL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,11 @@ namespace SistemaDeGerenc.APPv1
 {
     public partial class Form_cadastra_despesa : Form
     {
-        public Form_cadastra_despesa()
+        private string? email;
+        public Form_cadastra_despesa(string? email)
         {
             InitializeComponent();
+            this.email = email;
         }
 
         private void labelValor(object sender, EventArgs e)
@@ -28,16 +32,6 @@ namespace SistemaDeGerenc.APPv1
         }
 
         private void labelCadastraReceita(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelData(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxData(object sender, EventArgs e)
         {
 
         }
@@ -69,7 +63,17 @@ namespace SistemaDeGerenc.APPv1
 
         private void btoCadastrar(object sender, EventArgs e)
         {
-
+            double val = Convert.ToDouble(textValor.Text);
+            string cat = textCateg.Text;
+            string desc = textDesc.Text;
+            Despesa desp = new Despesa();
+            Usuario us = UsuarioBll.GetByEmail(email);
+            desp.IdDespesa =us.IdDespesa!.Value + 1;
+            desp.Valor = val;
+            desp.Categoria = cat;
+            desp.Descricao = desc;
+            DespesaBll.Add(desp);
+            this.Close();
         }
     }
 }

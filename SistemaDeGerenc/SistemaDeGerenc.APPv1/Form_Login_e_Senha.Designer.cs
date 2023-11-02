@@ -56,7 +56,7 @@
             textEmail.Name = "textEmail";
             textEmail.Size = new Size(212, 27);
             textEmail.TabIndex = 1;
-            textEmail.TextChanged += textBoxUsuario;
+            
             // 
             // textSenha
             // 
