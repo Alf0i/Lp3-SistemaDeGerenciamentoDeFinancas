@@ -47,7 +47,7 @@ namespace SistemaDeGerenc.APPv1
             {
                 UsuarioBll.GetByEmail(us.Email);
                 MessageBox.Show("Seja bem-vindo : " + us.Email);
-                this.Close();
+               // this.Close();
                 Menu.ShowDialog();
             }
         }

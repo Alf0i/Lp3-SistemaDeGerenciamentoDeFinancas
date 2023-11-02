@@ -68,7 +68,6 @@ namespace SistemaDeGerenc.APPv1
             string desc = textDesc.Text;
             Despesa desp = new Despesa();
             Usuario us = UsuarioBll.GetByEmail(email);
-            desp.IdDespesa =us.IdDespesa!.Value + 1;
             desp.Valor = val;
             desp.Categoria = cat;
             desp.Descricao = desc;

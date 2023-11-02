@@ -64,8 +64,8 @@ namespace SistemaDeGerenc.BLL
             using (var dbContext = new CUsersMarceDocumentsGithubLp3SistemadegerenciamentodefinancasSistemadegerencSistemadegerencDalDatabaseDatabaseMdfContext())
             {
                 Usuario us = GetByEmail(email);
-                var despesas = dbContext.Usuarios.Sum(p => us.IdDespesa!.Value);
-                var receitas = dbContext.Usuarios.Sum(p => us.IdReceita!.Value);
+                var despesas = dbContext.Despesas.Sum(p => us.IdDespesa!.Value);
+                var receitas = dbContext.Receita.Sum(p => us.IdReceita!.Value);
                 us.Saldo = receitas - despesas;
                 return us.Saldo;
             }
