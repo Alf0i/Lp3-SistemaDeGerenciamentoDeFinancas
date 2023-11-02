@@ -1,4 +1,9 @@
 
+using Azure.Messaging;
+using Microsoft.VisualBasic;
+using SistemaDeGerenc.BLL;
+using SistemaDeGerenc.MODEL;
+
 namespace SistemaDeGerenc.APPv1
 {
     public partial class Form_Login_e_Senha : Form
@@ -15,7 +20,28 @@ namespace SistemaDeGerenc.APPv1
 
         private void btoLogar(object sender, EventArgs e)
         {
-            MessageBox.Show("Seja bem vindo");
+            string usuario = textEmail.Text;
+            string senha = textSenha.Text;
+            Usuario us = new Usuario();
+            us.Email = usuario;
+            us.Senha = senha;
+
+            if (!UsuarioBll.AutenticarUsuario(usuario, senha)) 
+            {
+                var msg1 = MessageBox.Show("Usuario não identificado. Deseja cadastrar ?", "Usuario não encontrado", MessageBoxButtons.YesNo);
+                if (msg1 == DialogResult.Yes)
+                {
+                    //UsuarioBll.CadastrarUsuario(us);
+                    MessageBox.Show("cadastrado");
+                }
+                //
+                MessageBox.Show("Muito obrigado por escolher a nossa empresa." );
+            } 
+            else
+            {
+               UsuarioBll.GetByEmail(us.Email);
+               MessageBox.Show("Seja bem-vindo : " + us.Email);
+            }
         }
 
         private void textBoxEmail(object sender, EventArgs e)
@@ -42,5 +68,7 @@ namespace SistemaDeGerenc.APPv1
         {
 
         }
+
+
     }
 }
